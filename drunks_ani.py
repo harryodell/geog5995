@@ -8,6 +8,7 @@ import matplotlib.animation
 import drunkframework
 import pandas as pd
 import sys
+import csv
 
 # system args
 num_of_iterations = int(sys.argv[1])
@@ -177,13 +178,9 @@ for drunk in drunks:
 
 
 
-
-'''
-
-# 4. Save the density map to a file as text.
+# save the density map
 with open('environment.density.txt', 'w', newline='') as f:
     csvwriter = csv.writer(f, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
     for row in environment:
         csvwriter.writerow(row)
         
-'''
