@@ -19,15 +19,16 @@ The motivation behind this project was to fulfil the requirements for the final 
 
 The model runs from the command-line or terminal. The user should download or clone the repository and navigate (in the prompt) to the local directory. Then, the model runs as:
 
-```python drunks_ani.py```
+```python drunks_ani.py [arg1]```
 
+where  ```arg1``` is the max number of iterations.
 
-When the model is running, two plots will appear. First is a plot of the initial environemnt and the next is an animation of the model. We use ```matplotlib.animation.FuncAnimation()``` to make the animation - this function provides a plot of the current state of the model following each iteration and is recommended because of its use in helping the user understand the interactions within the model
+When the model is running, two plots will appear. First is a plot of the initial environemnt and the next is an animation of the model. We use ```matplotlib.animation.FuncAnimation()``` to make the animation - this function provides a plot of the current state of the model following each iteration and is recommended because of its use in helping the user understand the interactions within the model.
 
 
 ### Model outputs
 
-When the model stops running, it can be assumed that all the drunks have found their way home. 
+When the model stops running, it can be assumed that all the drunks have found their way home, or that the maximum number of iterations has been reached. 
 
 A file will then be written out to the same directory in which the code is in:
 
