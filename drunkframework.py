@@ -8,14 +8,15 @@ import random
 
 # Define a drunk class.
 class Drunk():
-    def __init__(self, environment, name):
+    def __init__(self, environment, name, row, col):
         self.environment = environment
         self.x = 147
         self.y = 138
         self.name = name 
+        self.row = row
+        self.col = col
 
-    # Method to move.
-    # % is a torus boundary in order to keep the drunks inside the defined environment.
+    # move
     def move(self):
         if random.random() < 0.5:
             self.y = (self.y + 4) % 300
@@ -27,10 +28,18 @@ class Drunk():
         else:
             self.x = (self.x - 4) % 300
 
-    # Method to monitor density. 
+    # steps
     def steps(self):
-        self.environment[self.y][self.x] += 50
+        self.environment[self.y][self.x] += 2
+        
+    # go home
+    def go_home(self):
+        self.x = self.row +2
+        self.y = self.col +2
         
         
+    
+    
+    # home safe
     def home_safe(self, drunks):
         drunks.remove(self)        
