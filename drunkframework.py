@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jul 11 11:51:04 2018
-GEOG5995M Programming for Social Science: Core Skills
-@author: Eugeni Vidal
 """
 import random
 
